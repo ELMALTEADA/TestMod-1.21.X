@@ -1,7 +1,10 @@
 package net.elmalteada.testmod;
 
+import net.elmalteada.testmod.block.ModBlocks;
+import net.elmalteada.testmod.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -53,6 +56,9 @@ public class TestMod {
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
 
 
     }
@@ -62,6 +68,14 @@ public class TestMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event){
+
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.DQ_ITEM);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.DQ_BLOCK);
+        }
 
     }
 
