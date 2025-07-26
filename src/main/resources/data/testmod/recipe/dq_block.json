@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "testmod:dq_item"
+    }
+  },
+        "pattern": [
+          "BBB",
+          "BBB",
+          "BBB"
+        ],
+  "result": {
+    "count": 1,
+    "id": "testmod:dq_block"
+  }
+}
