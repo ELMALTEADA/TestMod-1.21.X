@@ -19,7 +19,14 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> DQ_BLOCK = registerBlock( "dq_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+                    .strength(2.0f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+
+    public static final DeferredBlock<Block> DQ_ORE = registerBlock( "dq_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

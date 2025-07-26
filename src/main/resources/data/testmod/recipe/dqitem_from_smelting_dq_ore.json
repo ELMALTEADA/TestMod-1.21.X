@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": "100",
+  "experience": 0.20,
+  "group": "dq item",
+  "ingredient": {
+    "item": "testmod:dq_ore"
+  },
+  "result": {
+    "count": 9,
+    "id": "testmod:dq_item"
+  }
+}

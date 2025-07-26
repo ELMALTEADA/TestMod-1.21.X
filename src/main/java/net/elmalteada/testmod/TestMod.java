@@ -76,6 +76,10 @@ public class TestMod {
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.DQ_BLOCK);
         }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.DQ_ORE);
+        }
+
 
     }
 
