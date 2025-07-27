@@ -27,6 +27,10 @@ public class ModBlocks {
                     .strength(0.8f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 
+    public static final DeferredBlock<Block> FLUID_TANK = registerBlock( "fluid_tank",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.8f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
